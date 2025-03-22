@@ -19,7 +19,7 @@ Cryptonarrative is a Next.js frontend application that interfaces with the Crypt
 - **Type Safety**: TypeScript
 - **Class Utilities**: clsx, class-variance-authority, tailwind-merge
 - **Linting**: ESLint
-- **API**: CryptoScrapper .NET
+- **API**: [CryptoScrapper .NET](https://github.com/QyperXit/cryptoscrapper)
 
 ## Installation
 
