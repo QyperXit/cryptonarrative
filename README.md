@@ -2,7 +2,7 @@
 
 Cryptonarrative is a Next.js frontend application that interfaces with the CryptoScrapper .NET API to display cryptocurrency narratives. It provides a clean interface to browse and explore different crypto narratives fetched from the API.
 
-![Application Demo](https://i.imgur.com/3OOu1oQ.gif)
+![Application Demo](https://i.imgur.com/BcWO6Jv.gif)
 
 ## Features
 
