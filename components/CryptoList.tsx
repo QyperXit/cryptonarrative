@@ -43,8 +43,33 @@ const CryptoList: React.FC<CryptoListProps> = ({ category }) => {
     setCurrentPage(1); // Reset to 1st page when category changes
   }, [category]);
 
+  // Skeleton loader that matches the height of 5 CryptoCards
+  const skeletonLoader = (
+    <div className="space-y-2 mb-4">
+      {[...Array(5)].map((_, index) => (
+        <div
+          key={index}
+          className="h-[72px] bg-[#2d2d2d] rounded-lg animate-pulse"
+        ></div>
+      ))}
+    </div>
+  );
+
   if (loading) {
-    return <div className="text-center py-4">Loading...</div>;
+    return (
+      <div className="min-h-[400px]">
+        {skeletonLoader}
+        <div className="flex justify-center items-center gap-2 mt-6">
+          <div className="px-3 py-1 bg-[#2d2d2d] rounded-md opacity-50">
+            Previous
+          </div>
+          <div className="text-sm text-gray-400">Page 1 of 1</div>
+          <div className="px-3 py-1 bg-[#2d2d2d] rounded-md opacity-50">
+            Next
+          </div>
+        </div>
+      </div>
+    );
   }
 
   const totalPages = Math.ceil(cryptos.length / ITEMS_PER_PAGE);
